@@ -1,0 +1,23 @@
+[
+  {
+    "university": "서울대학교",
+    "code": "snu",
+    "success": true,
+    "notices": [],
+    "crawled_at": "2025-06-16T15:50:29.235157"
+  },
+  {
+    "university": "연세대학교",
+    "code": "yonsei-s",
+    "success": true,
+    "notices": [],
+    "crawled_at": "2025-06-16T15:50:31.293194"
+  },
+  {
+    "university": "연세대학교",
+    "code": "yonsei-j",
+    "success": true,
+    "notices": [],
+    "crawled_at": "2025-06-16T15:50:37.000643"
+  }
+]
