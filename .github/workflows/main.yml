@@ -42,6 +42,10 @@ jobs:
     # 5. 크롤링 실행
     - name: 크롤링 시작
       run: python main.py
+
+    # 수정된 부분: Git 설정 및 Pull 추가
+    - name: 변경사항 Pull
+      run: git pull origin main
     
     # 6. 결과 커밋 및 푸시
     - name: 결과 저장
