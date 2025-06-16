@@ -1,0 +1,30 @@
+[
+  {
+    "university": "서울대학교",
+    "code": "snu",
+    "success": true,
+    "notices": [],
+    "crawled_at": "2025-06-16T16:00:54.697504"
+  },
+  {
+    "university": "연세대학교",
+    "code": "yonsei-s",
+    "success": true,
+    "notices": [],
+    "crawled_at": "2025-06-16T16:00:56.977950"
+  },
+  {
+    "university": "연세대학교",
+    "code": "yonsei-j",
+    "success": true,
+    "notices": [],
+    "crawled_at": "2025-06-16T16:00:58.057478"
+  },
+  {
+    "university": "KAIST",
+    "code": "kaist",
+    "success": true,
+    "notices": [],
+    "crawled_at": "2025-06-16T16:01:00.578503"
+  }
+]
