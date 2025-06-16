@@ -6,10 +6,10 @@
       "code": "snu",
       "notice_url": "https://admission.snu.ac.kr/undergraduate/notice",
       "selector": {
-        "list": "ul.notice-list li",
-        "title": ".title",
-        "date": ".date",
-        "link": "a"
+        "list": "ul.board-list > li",
+        "title": "a.board-title",
+        "date": "span.board-date",
+        "link": "a.board-title"
       }
     },
     {
