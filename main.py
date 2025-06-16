@@ -12,37 +12,65 @@ def crawl_university(univ_info):
     """각 대학의 공지사항을 크롤링"""
     print(f"\n{'='*50}")
     print(f"크롤링 시작: {univ_info['name']}")
+    print(f"URL: {univ_info['notice_url']}")
     
     try:
-        # 웹페이지 요청
         headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+            'Accept-Language': 'ko-KR,ko;q=0.9,en;q=0.8',
+            'Accept-Encoding': 'gzip, deflate, br',
+            'Connection': 'keep-alive',
+            'Upgrade-Insecure-Requests': '1'
         }
-        response = requests.get(univ_info['notice_url'], headers=headers, timeout=10)
+        
+        response = requests.get(univ_info['notice_url'], headers=headers, timeout=15)
         response.raise_for_status()
         
-        # HTML 파싱
         soup = BeautifulSoup(response.text, 'html.parser')
         notices = []
         
-        # 공지사항 목록 추출
-        notice_list = soup.select(univ_info['selector']['list'])[:5]  # 최근 5개만
+        # 디버깅 정보
+        print(f"응답 상태: {response.status_code}")
         
-        for item in notice_list:
+        # 공지사항 목록 추출
+        notice_list = soup.select(univ_info['selector']['list'])
+        print(f"찾은 항목 수: {len(notice_list)}")
+        
+        if not notice_list:
+            print(f"  ! 선택자 '{univ_info['selector']['list']}'로 항목을 찾을 수 없음")
+            # HTML 일부 출력하여 구조 확인
+            print(f"  ! HTML 샘플: {soup.prettify()[:500]}...")
+        
+        for idx, item in enumerate(notice_list[:5]):  # 최근 5개만
             try:
                 title_elem = item.select_one(univ_info['selector']['title'])
                 date_elem = item.select_one(univ_info['selector']['date'])
                 link_elem = item.select_one(univ_info['selector']['link'])
                 
                 if title_elem:
+                    # 제목에서 불필요한 공백 제거
+                    title = ' '.join(title_elem.get_text().split())
+                    
+                    # 링크 처리 (상대 경로인 경우 절대 경로로 변환)
+                    link = ''
+                    if link_elem and link_elem.get('href'):
+                        link = link_elem.get('href')
+                        if link.startswith('/'):
+                            from urllib.parse import urljoin
+                            link = urljoin(univ_info['notice_url'], link)
+                    
                     notice = {
-                        'title': title_elem.get_text(strip=True),
+                        'title': title,
                         'date': date_elem.get_text(strip=True) if date_elem else '',
-                        'link': link_elem.get('href', '') if link_elem else '',
+                        'link': link,
                         'university': univ_info['name']
                     }
                     notices.append(notice)
-                    print(f"  - {notice['title']}")
+                    print(f"  ✓ {notice['title'][:50]}...")
+                else:
+                    print(f"  ! {idx+1}번째 항목에서 제목을 찾을 수 없음")
+                    
             except Exception as e:
                 print(f"  ! 항목 파싱 오류: {str(e)}")
                 continue
@@ -55,15 +83,20 @@ def crawl_university(univ_info):
             'crawled_at': datetime.now().isoformat()
         }
         
+    except requests.exceptions.RequestException as e:
+        print(f"  ! 네트워크 오류: {str(e)}")
     except Exception as e:
         print(f"  ! 크롤링 실패: {str(e)}")
-        return {
-            'university': univ_info['name'],
-            'code': univ_info['code'],
-            'success': False,
-            'error': str(e),
-            'crawled_at': datetime.now().isoformat()
-        }
+        import traceback
+        traceback.print_exc()
+        
+    return {
+        'university': univ_info['name'],
+        'code': univ_info['code'],
+        'success': False,
+        'error': str(e),
+        'crawled_at': datetime.now().isoformat()
+    }
 
 def save_results(results):
     """결과를 JSON 파일로 저장"""
