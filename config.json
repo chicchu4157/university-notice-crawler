@@ -1,0 +1,40 @@
+{
+  "universities": [
+    {
+      "name": "서울대학교",
+      "category": "공통",
+      "code": "snu",
+      "notice_url": "https://admission.snu.ac.kr/undergraduate/notice",
+      "selector": {
+        "list": "ul.notice-list li",
+        "title": ".title",
+        "date": ".date",
+        "link": "a"
+      }
+    },
+    {
+      "name": "연세대학교",
+      "category": "수시",
+      "code": "yonsei-s",
+      "notice_url": "https://admission.yonsei.ac.kr/seoul/admission/html/rolling/notice.asp",
+      "selector": {
+        "list": "div.board-list-wrapper tr",
+        "title": ".td-subject a",
+        "date": ".td-date",
+        "link": ".td-subject a"
+      }
+    },
+    {
+      "name": "연세대학교",
+      "category": "공통",
+      "code": "yonsei-j",
+      "notice_url": "https://admission.yonsei.ac.kr/seoul/admission/html/regular/notice.asp",
+      "selector": {
+        "list": "div.board-list-wrapper tr",
+        "title": ".td-subject a",
+        "date": ".td-date",
+        "link": ".td-subject a"
+      }
+    }
+  ]
+}
