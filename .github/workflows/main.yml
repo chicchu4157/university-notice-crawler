@@ -8,7 +8,20 @@ on:
   
   # 수동 실행 허용
   workflow_dispatch:
+    inputs:
+        mode:
+          description: '실행 모드'
+          required: true
+          default: 'crawl'
+          type: choice
+          options:
+            - crawl      # 일반 크롤링
+            - test       # 테스트 (디버깅)
+            - debug      # 상세 디버깅
 
+permissions:
+  contents: write
+  
 jobs:
   crawl:
     runs-on: ubuntu-latest
@@ -39,19 +52,31 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     
-    # 5. 크롤링 실행
-    - name: 크롤링 시작
-      run: python main.py
-
-    # 수정된 부분: Git 설정 및 Pull 추가
-    - name: 변경사항 Pull
-      run: git pull origin main
+    # 모드에 따라 다른 스크립트 실행
+    - name: 스크립트 실행
+      run: |
+        if [ "${{ github.event.inputs.mode }}" = "test" ]; then
+          echo "🧪 테스트 모드 실행"
+          python test_crawl.py
+        elif [ "${{ github.event.inputs.mode }}" = "debug" ]; then
+          echo "🔍 디버그 모드 실행"
+          python debug_crawl.py
+        else
+          echo "🤖 일반 크롤링 실행"
+          python main.py
+        fi
     
-    # 6. 결과 커밋 및 푸시
+    # 크롤링 모드일 때만 결과 저장
     - name: 결과 저장
+      if: github.event.inputs.mode == 'crawl' || github.event.inputs.mode == ''
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
+        git pull origin main
         git add data/
-        git diff --staged --quiet || git commit -m "🤖 크롤링 결과 업데이트: $(date +'%Y-%m-%d %H:%M:%S')"
-        git push
+        if git diff --staged --quiet; then
+          echo "변경사항이 없습니다."
+        else
+          git commit -m "🤖 크롤링 결과 업데이트: $(date +'%Y-%m-%d %H:%M:%S')"
+          git push
+        fi
