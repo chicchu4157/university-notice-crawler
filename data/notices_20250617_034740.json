@@ -1,0 +1,61 @@
+[
+  {
+    "university": "서울대학교",
+    "code": "snu",
+    "success": true,
+    "notices": [
+      {
+        "title": "2026학년도 대학 신입학생 수시모집 안내",
+        "date": "2025. 5. 29.",
+        "link": "https://admission.snu.ac.kr/undergraduate/notice?md=v&bbsidx=155489",
+        "university": "서울대학교"
+      },
+      {
+        "title": "2025 수도권 교사 대상 상담소 신청 방법(접수화면 안내) 첨부파일 있음",
+        "date": "2025. 5. 16.",
+        "link": "https://admission.snu.ac.kr/undergraduate/notice?md=v&bbsidx=155140",
+        "university": "서울대학교"
+      },
+      {
+        "title": "2026학년도 서울대학교 학생부종합전형 안내 책자(점자파일 추가) 첨부파일 있음",
+        "date": "2025. 5. 2.",
+        "link": "https://admission.snu.ac.kr/undergraduate/notice?md=v&bbsidx=154719",
+        "university": "서울대학교"
+      },
+      {
+        "title": "2027학년도 대학 신입학생 입학전형 시행계획 첨부파일 있음",
+        "date": "2025. 4. 30.",
+        "link": "https://admission.snu.ac.kr/undergraduate/notice?md=v&bbsidx=154588",
+        "university": "서울대학교"
+      },
+      {
+        "title": "2025 수도권 교사 대상 상담소 신청 및 접수 안내",
+        "date": "2025. 4. 2.",
+        "link": "https://admission.snu.ac.kr/undergraduate/notice?md=v&bbsidx=153639",
+        "university": "서울대학교"
+      }
+    ],
+    "crawled_at": "2025-06-17T03:47:35.657567"
+  },
+  {
+    "university": "연세대학교",
+    "code": "yonsei-s",
+    "success": true,
+    "notices": [],
+    "crawled_at": "2025-06-17T03:47:37.263852"
+  },
+  {
+    "university": "연세대학교",
+    "code": "yonsei-j",
+    "success": true,
+    "notices": [],
+    "crawled_at": "2025-06-17T03:47:38.824197"
+  },
+  {
+    "university": "KAIST",
+    "code": "kaist",
+    "success": true,
+    "notices": [],
+    "crawled_at": "2025-06-17T03:47:40.611593"
+  }
+]
