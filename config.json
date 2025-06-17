@@ -1,0 +1,122 @@
+{
+  "crawler": {
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "timeout": 30,
+    "retry_count": 3,
+    "retry_delay": 2,
+    "selenium_timeout": 20,
+    "page_load_timeout": 30,
+    "concurrent_limit": 5
+  },
+  "patterns": {
+    "date_patterns": [
+      "\\d{4}[.\\-/]\\d{1,2}[.\\-/]\\d{1,2}",
+      "\\d{2}[.\\-/]\\d{1,2}[.\\-/]\\d{1,2}",
+      "\\d{4}년\\s*\\d{1,2}월\\s*\\d{1,2}일",
+      "\\d{2}\\.\\d{2}\\.\\d{2}",
+      "\\d{4}\\-\\d{2}\\-\\d{2}",
+      "\\d{2}/\\d{2}/\\d{4}"
+    ],
+    "notice_keywords": [
+      "공지",
+      "안내",
+      "모집",
+      "전형",
+      "입학",
+      "합격",
+      "발표",
+      "시험",
+      "접수",
+      "마감",
+      "변경",
+      "연기",
+      "취소"
+    ],
+    "list_selectors": [
+      "tbody tr",
+      "ul li",
+      ".list",
+      ".board",
+      ".notice-list",
+      ".board-list",
+      "table tr",
+      ".content-list",
+      ".item"
+    ],
+    "title_selectors": [
+      "a",
+      ".title",
+      ".subject",
+      ".tit",
+      "td:nth-child(2)",
+      "td:nth-child(3)",
+      ".notice-title"
+    ],
+    "date_selectors": [
+      ".date",
+      ".regdate",
+      ".wdate",
+      "td:last-child",
+      "td:nth-last-child(2)",
+      ".time"
+    ],
+    "link_selectors": [
+      "a",
+      ".title a",
+      ".subject a",
+      "td a"
+    ]
+  },
+  "detection": {
+    "min_confidence": 0.7,
+    "min_notices": 3,
+    "max_title_length": 200,
+    "min_title_length": 5,
+    "similarity_threshold": 0.8,
+    "structure_weight": 0.4,
+    "content_weight": 0.6
+  },
+  "database": {
+    "table_name": "university_notices",
+    "batch_size": 100,
+    "duplicate_check": true,
+    "max_title_length": 500
+  },
+  "logging": {
+    "level": "INFO",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    "file_name": "logs/crawler.log",
+    "max_file_size": "10MB",
+    "backup_count": 5
+  },
+  "batch_size": 50,
+  "selenium": {
+    "headless": true,
+    "window_size": [1920, 1080],
+    "chrome_options": [
+      "--no-sandbox",
+      "--disable-dev-shm-usage",
+      "--disable-gpu",
+      "--disable-web-security",
+      "--disable-features=VizDisplayCompositor",
+      "--disable-extensions",
+      "--disable-plugins",
+      "--disable-images",
+      "--disable-javascript"
+    ]
+  },
+  "fallback": {
+    "use_selenium": true,
+    "selenium_selectors": [
+      ".notice-list tr",
+      ".board-list li",
+      "table tbody tr",
+      ".list-group .list-group-item"
+    ]
+  },
+  "validation": {
+    "required_fields": ["university_name", "notice_title"],
+    "max_notices_per_university": 100,
+    "date_range_days": 365
+  }
+}
