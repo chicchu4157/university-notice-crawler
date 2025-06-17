@@ -1,1 +1,418 @@
-
+[
+  {
+    "name": "서울대학교",
+    "notice_url": "https://admission.snu.ac.kr/undergraduate/notice",
+    "domain": "snu.ac.kr",
+    "region": "서울",
+    "type": "국립",
+    "category": "일반대학"
+  },
+  {
+    "name": "연세대학교",
+    "notice_url": "https://admission.yonsei.ac.kr/seoul/admission/notice.do",
+    "domain": "yonsei.ac.kr",
+    "region": "서울",
+    "type": "사립",
+    "category": "일반대학"
+  },
+  {
+    "name": "고려대학교",
+    "notice_url": "https://oku.korea.ac.kr/admission/undergraduate/notice",
+    "domain": "korea.ac.kr",
+    "region": "서울",
+    "type": "사립",
+    "category": "일반대학"
+  },
+  {
+    "name": "성균관대학교",
+    "notice_url": "https://admission.skku.edu/admission/undergraduate/notice",
+    "domain": "skku.edu",
+    "region": "서울",
+    "type": "사립",
+    "category": "일반대학"
+  },
+  {
+    "name": "한양대학교",
+    "notice_url": "https://admission.hanyang.ac.kr/notice",
+    "domain": "hanyang.ac.kr",
+    "region": "서울",
+    "type": "사립",
+    "category": "일반대학"
+  },
+  {
+    "name": "중앙대학교",
+    "notice_url": "https://admission.cau.ac.kr/notice",
+    "domain": "cau.ac.kr",
+    "region": "서울",
+    "type": "사립",
+    "category": "일반대학"
+  },
+  {
+    "name": "경희대학교",
+    "notice_url": "https://admission.khu.ac.kr/notice",
+    "domain": "khu.ac.kr",
+    "region": "서울",
+    "type": "사립",
+    "category": "일반대학"
+  },
+  {
+    "name": "서강대학교",
+    "notice_url": "https://admission.sogang.ac.kr/notice",
+    "domain": "sogang.ac.kr",
+    "region": "서울",
+    "type": "사립",
+    "category": "일반대학"
+  },
+  {
+    "name": "이화여자대학교",
+    "notice_url": "https://admission.ewha.ac.kr/notice",
+    "domain": "ewha.ac.kr",
+    "region": "서울",
+    "type": "사립",
+    "category": "일반대학"
+  },
+  {
+    "name": "홍익대학교",
+    "notice_url": "https://admission.hongik.ac.kr/notice",
+    "domain": "hongik.ac.kr",
+    "region": "서울",
+    "type": "사립",
+    "category": "일반대학"
+  },
+  {
+    "name": "부산대학교",
+    "notice_url": "https://admission.pusan.ac.kr/notice",
+    "domain": "pusan.ac.kr",
+    "region": "부산",
+    "type": "국립",
+    "category": "일반대학"
+  },
+  {
+    "name": "전남대학교",
+    "notice_url": "https://admission.jnu.ac.kr/notice",
+    "domain": "jnu.ac.kr",
+    "region": "광주",
+    "type": "국립",
+    "category": "일반대학"
+  },
+  {
+    "name": "경북대학교",
+    "notice_url": "https://admission.knu.ac.kr/notice",
+    "domain": "knu.ac.kr",
+    "region": "대구",
+    "type": "국립",
+    "category": "일반대학"
+  },
+  {
+    "name": "충남대학교",
+    "notice_url": "https://admission.cnu.ac.kr/notice",
+    "domain": "cnu.ac.kr",
+    "region": "대전",
+    "type": "국립",
+    "category": "일반대학"
+  },
+  {
+    "name": "인하대학교",
+    "notice_url": "https://admission.inha.ac.kr/notice",
+    "domain": "inha.ac.kr",
+    "region": "인천",
+    "type": "사립",
+    "category": "일반대학"
+  },
+  {
+    "name": "KAIST",
+    "notice_url": "https://admission.kaist.ac.kr/notice",
+    "domain": "kaist.ac.kr",
+    "region": "대전",
+    "type": "국립",
+    "category": "과학기술대학"
+  },
+  {
+    "name": "POSTECH",
+    "notice_url": "https://admission.postech.ac.kr/notice",
+    "domain": "postech.ac.kr",
+    "region": "경북",
+    "type": "사립",
+    "category": "과학기술대학"
+  },
+  {
+    "name": "UNIST",
+    "notice_url": "https://admission.unist.ac.kr/notice",
+    "domain": "unist.ac.kr",
+    "region": "울산",
+    "type": "국립",
+    "category": "과학기술대학"
+  },
+  {
+    "name": "GIST",
+    "notice_url": "https://admission.gist.ac.kr/notice",
+    "domain": "gist.ac.kr",
+    "region": "광주",
+    "type": "국립",
+    "category": "과학기술대학"
+  },
+  {
+    "name": "DGIST",
+    "notice_url": "https://admission.dgist.ac.kr/notice",
+    "domain": "dgist.ac.kr",
+    "region": "대구",
+    "type": "국립",
+    "category": "과학기술대학"
+  },
+  {
+    "name": "건국대학교",
+    "notice_url": "https://admission.konkuk.ac.kr/notice",
+    "domain": "konkuk.ac.kr",
+    "region": "서울",
+    "type": "사립",
+    "category": "일반대학"
+  },
+  {
+    "name": "동국대학교",
+    "notice_url": "https://admission.dongguk.edu/notice",
+    "domain": "dongguk.edu",
+    "region": "서울",
+    "type": "사립",
+    "category": "일반대학"
+  },
+  {
+    "name": "국민대학교",
+    "notice_url": "https://admission.kookmin.ac.kr/notice",
+    "domain": "kookmin.ac.kr",
+    "region": "서울",
+    "type": "사립",
+    "category": "일반대학"
+  },
+  {
+    "name": "숭실대학교",
+    "notice_url": "https://admission.ssu.ac.kr/notice",
+    "domain": "ssu.ac.kr",
+    "region": "서울",
+    "type": "사립",
+    "category": "일반대학"
+  },
+  {
+    "name": "세종대학교",
+    "notice_url": "https://admission.sejong.ac.kr/notice",
+    "domain": "sejong.ac.kr",
+    "region": "서울",
+    "type": "사립",
+    "category": "일반대학"
+  },
+  {
+    "name": "단국대학교",
+    "notice_url": "https://admission.dankook.ac.kr/notice",
+    "domain": "dankook.ac.kr",
+    "region": "경기",
+    "type": "사립",
+    "category": "일반대학"
+  },
+  {
+    "name": "아주대학교",
+    "notice_url": "https://admission.ajou.ac.kr/notice",
+    "domain": "ajou.ac.kr",
+    "region": "경기",
+    "type": "사립",
+    "category": "일반대학"
+  },
+  {
+    "name": "가천대학교",
+    "notice_url": "https://admission.gachon.ac.kr/notice",
+    "domain": "gachon.ac.kr",
+    "region": "경기",
+    "type": "사립",
+    "category": "일반대학"
+  },
+  {
+    "name": "성신여자대학교",
+    "notice_url": "https://admission.sungshin.ac.kr/notice",
+    "domain": "sungshin.ac.kr",
+    "region": "서울",
+    "type": "사립",
+    "category": "일반대학"
+  },
+  {
+    "name": "덕성여자대학교",
+    "notice_url": "https://admission.duksung.ac.kr/notice",
+    "domain": "duksung.ac.kr",
+    "region": "서울",
+    "type": "사립",
+    "category": "일반대학"
+  },
+  {
+    "name": "서울시립대학교",
+    "notice_url": "https://admission.uos.ac.kr/notice",
+    "domain": "uos.ac.kr",
+    "region": "서울",
+    "type": "공립",
+    "category": "일반대학"
+  },
+  {
+    "name": "인천대학교",
+    "notice_url": "https://admission.inu.ac.kr/notice",
+    "domain": "inu.ac.kr",
+    "region": "인천",
+    "type": "공립",
+    "category": "일반대학"
+  },
+  {
+    "name": "경기대학교",
+    "notice_url": "https://admission.kyonggi.ac.kr/notice",
+    "domain": "kyonggi.ac.kr",
+    "region": "경기",
+    "type": "사립",
+    "category": "일반대학"
+  },
+  {
+    "name": "명지대학교",
+    "notice_url": "https://admission.mju.ac.kr/notice",
+    "domain": "mju.ac.kr",
+    "region": "경기",
+    "type": "사립",
+    "category": "일반대학"
+  },
+  {
+    "name": "광운대학교",
+    "notice_url": "https://admission.kw.ac.kr/notice",
+    "domain": "kw.ac.kr",
+    "region": "서울",
+    "type": "사립",
+    "category": "일반대학"
+  },
+  {
+    "name": "상명대학교",
+    "notice_url": "https://admission.smu.ac.kr/notice",
+    "domain": "smu.ac.kr",
+    "region": "서울",
+    "type": "사립",
+    "category": "일반대학"
+  },
+  {
+    "name": "삼육대학교",
+    "notice_url": "https://admission.sahmyook.ac.kr/notice",
+    "domain": "sahmyook.ac.kr",
+    "region": "서울",
+    "type": "사립",
+    "category": "일반대학"
+  },
+  {
+    "name": "총신대학교",
+    "notice_url": "https://admission.chongshin.ac.kr/notice",
+    "domain": "chongshin.ac.kr",
+    "region": "서울",
+    "type": "사립",
+    "category": "일반대학"
+  },
+  {
+    "name": "한국외국어대학교",
+    "notice_url": "https://admission.hufs.ac.kr/notice",
+    "domain": "hufs.ac.kr",
+    "region": "서울",
+    "type": "사립",
+    "category": "일반대학"
+  },
+  {
+    "name": "서울여자대학교",
+    "notice_url": "https://admission.swu.ac.kr/notice",
+    "domain": "swu.ac.kr",
+    "region": "서울",
+    "type": "사립",
+    "category": "일반대학"
+  },
+  {
+    "name": "숙명여자대학교",
+    "notice_url": "https://admission.sookmyung.ac.kr/notice",
+    "domain": "sookmyung.ac.kr",
+    "region": "서울",
+    "type": "사립",
+    "category": "일반대학"
+  },
+  {
+    "name": "동덕여자대학교",
+    "notice_url": "https://admission.dongduk.ac.kr/notice",
+    "domain": "dongduk.ac.kr",
+    "region": "서울",
+    "type": "사립",
+    "category": "일반대학"
+  },
+  {
+    "name": "한성대학교",
+    "notice_url": "https://admission.hansung.ac.kr/notice",
+    "domain": "hansung.ac.kr",
+    "region": "서울",
+    "type": "사립",
+    "category": "일반대학"
+  },
+  {
+    "name": "서경대학교",
+    "notice_url": "https://admission.seokyeong.ac.kr/notice",
+    "domain": "seokyeong.ac.kr",
+    "region": "서울",
+    "type": "사립",
+    "category": "일반대학"
+  },
+  {
+    "name": "한국산업기술대학교",
+    "notice_url": "https://admission.kpu.ac.kr/notice",
+    "domain": "kpu.ac.kr",
+    "region": "경기",
+    "type": "국립",
+    "category": "기술대학"
+  },
+  {
+    "name": "한국기술교육대학교",
+    "notice_url": "https://admission.koreatech.ac.kr/notice",
+    "domain": "koreatech.ac.kr",
+    "region": "충남",
+    "type": "국립",
+    "category": "기술대학"
+  },
+  {
+    "name": "한국항공대학교",
+    "notice_url": "https://admission.kau.ac.kr/notice",
+    "domain": "kau.ac.kr",
+    "region": "경기",
+    "type": "사립",
+    "category": "일반대학"
+  },
+  {
+    "name": "한국해양대학교",
+    "notice_url": "https://admission.kmou.ac.kr/notice",
+    "domain": "kmou.ac.kr",
+    "region": "부산",
+    "type": "국립",
+    "category": "특수대학"
+  },
+  {
+    "name": "목포해양대학교",
+    "notice_url": "https://admission.mmu.ac.kr/notice",
+    "domain": "mmu.ac.kr",
+    "region": "전남",
+    "type": "국립",
+    "category": "특수대학"
+  },
+  {
+    "name": "한국교원대학교",
+    "notice_url": "https://admission.knue.ac.kr/notice",
+    "domain": "knue.ac.kr",
+    "region": "충북",
+    "type": "국립",
+    "category": "교육대학"
+  },
+  {
+    "name": "서울교육대학교",
+    "notice_url": "https://admission.snue.ac.kr/notice",
+    "domain": "snue.ac.kr",
+    "region": "서울",
+    "type": "국립",
+    "category": "교육대학"
+  },
+  {
+    "name": "경인교육대학교",
+    "notice_url": "https://admission.ginue.ac.kr/notice",
+    "domain": "ginue.ac.kr",
+    "region": "인천",
+    "type": "국립",
+    "category": "교육대학"
+  }
+]
